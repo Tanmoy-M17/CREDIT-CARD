@@ -35,7 +35,6 @@ export const Card = ({ cardvalueHandeller, length, perBoxLength }) => {
       .getData("text")
       .split("")
       .filter((item, index) => index < length * perBoxLength);
-    //   console.log(data)
     let newData = [];
     for (let i = 0; i < data.length; i += perBoxLength) {
       let tmp = "";
@@ -44,7 +43,6 @@ export const Card = ({ cardvalueHandeller, length, perBoxLength }) => {
       }
       newData.push(tmp);
     }
-    // console.log(newData,"new data")
     newData.forEach((value, index) => {
       inputval[index] = value;
       inputRef.current[index].value = value;
